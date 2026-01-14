@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BeautySkin – Premium Skincare</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background:#0b0e1a;
+  color:#fff;
+}
+header{
+  padding:40px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#7c4dff,#00e5ff);
+}
+.logo{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+}
+.logo svg{width:50px;height:50px}
+.logo span{
+  font-size:32px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+section{padding:50px 20px;max-width:1200px;margin:auto}
+h2{
+  margin-bottom:20px;
+  font-size:28px;
+  letter-spacing:1px;
+}
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.card{
+  background:#151a33;
+  padding:20px;
+  border-radius:16px;
+  cursor:pointer;
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+.card img{
+  width:100%;
+  border-radius:12px;
+}
+.card h3{margin:12px 0 6px}
+.card p{color:#bbb;font-size:14px}
+.price{font-weight:700;margin-top:8px}
+
+#details{
+  display:none;
+  background:#11152b;
+  border-radius:20px;
+  padding:30px;
+  margin-top:40px;
+}
+#details img{
+  max-width:260px;
+  border-radius:16px;
+}
+.details-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+button{
+  padding:14px 20px;
+  border:none;
+  border-radius:14px;
+  font-weight:800;
+  cursor:pointer;
+  background:#00e5ff;
+  color:#000;
+}
+footer{
+  padding:30px;
+  text-align:center;
+  color:#aaa;
+}
+@media(max-width:800px){
+  .details-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <svg viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45" fill="#fff"/>
+      <path d="M30 55c10-25 30-25 40 0" fill="none" stroke="#7c4dff" stroke-width="6"/>
+    </svg>
+    <span>BeautySkin</span>
+  </div>
+  <p>Premium Skincare Collection 2026</p>
+</header>
+
+<!-- PRODUCTS -->
+<section>
+
+<h2>SKIN BRIGHTENING</h2>
+<div class="products">
+  <div class="card" onclick="showProduct('Glow Serum','Boosts radiance and evens skin tone.','49.99')">
+    <img src="https://via.placeholder.com/400x400?text=Glow+Serum">
+    <h3>Glow Serum</h3>
+    <div class="price">$49.99</div>
+  </div>
+
+  <div class="card" onclick="showProduct('Vitamin C Cream','Brightens dull skin and improves texture.','39.99')">
+    <img src="https://via.placeholder.com/400x400?text=Vitamin+C">
+    <h3>Vitamin C Cream</h3>
+    <div class="price">$39.99</div>
+  </div>
+
+  <div class="card" onclick="showProduct('Whitening Essence','Reduces dark spots safely.','44.99')">
+    <img src="https://via.placeholder.com/400x400?text=Essence">
+    <h3>Whitening Essence</h3>
+    <div class="price">$44.99</div>
+  </div>
+</div>
+
+<h2>DEEP HYDRATION</h2>
+<div class="products">
+  <div class="card" onclick="showProduct('Hydra Cream','24h intense hydration.','34.99')">
+    <img src="https://via.placeholder.com/400x400?text=Hydra+Cream">
+    <h3>Hydra Cream</h3>
+    <div class="price">$34.99</div>
+  </div>
+
+  <div class="card" onclick="showProduct('Aqua Gel','Lightweight daily moisture.','29.99')">
+    <img src="https://via.placeholder.com/400x400?text=Aqua+Gel">
+    <h3>Aqua Gel</h3>
+    <div class="price">$29.99</div>
+  </div>
+
+  <div class="card" onclick="showProduct('Moisture Mask','Deep nourishment overnight.','24.99')">
+    <img src="https://via.placeholder.com/400x400?text=Mask">
+    <h3>Moisture Mask</h3>
+    <div class="price">$24.99</div>
+  </div>
+</div>
+
+<h2>UNDER EYE CARE</h2>
+<div class="products">
+  <div class="card" onclick="showProduct('Eye Gel Patches','Gelatin pads for dark circles.','19.99')">
+    <img src="https://via.placeholder.com/400x400?text=Eye+Gel">
+    <h3>Eye Gel Patches</h3>
+    <div class="price">$19.99</div>
+  </div>
+
+  <div class="card" onclick="showProduct('Caffeine Eye Cream','Reduces puffiness.','27.99')">
+    <img src="https://via.placeholder.com/400x400?text=Eye+Cream">
+    <h3>Caffeine Eye Cream</h3>
+    <div class="price">$27.99</div>
+  </div>
+
+  <div class="card" onclick="showProduct('Repair Eye Serum','Smooths fine lines.','31.99')">
+    <img src="https://via.placeholder.com/400x400?text=Eye+Serum">
+    <h3>Repair Eye Serum</h3>
+    <div class="price">$31.99</div>
+  </div>
+</div>
+
+<h2>BLACKHEADS REMOVAL</h2>
+<div class="products">
+  <div class="card" onclick="showProduct('Charcoal Mask','Deep pore cleansing.','22.99')">
+    <img src="https://via.placeholder.com/400x400?text=Charcoal">
+    <h3>Charcoal Mask</h3>
+    <div class="price">$22.99</div>
+  </div>
+
+  <div class="card" onclick="showProduct('Pore Cleanser','Unclogs pores gently.','26.99')">
+    <img src="https://via.placeholder.com/400x400?text=Pore+Cleanser">
+    <h3>Pore Cleanser</h3>
+    <div class="price">$26.99</div>
+  </div>
+
+  <div class="card" onclick="showProduct('Blackhead Strips','Instant results.','14.99')">
+    <img src="https://via.placeholder.com/400x400?text=Strips">
+    <h3>Blackhead Strips</h3>
+    <div class="price">$14.99</div>
+  </div>
+</div>
+
+<h2>SUNSCREEN</h2>
+<div class="products">
+  <div class="card" onclick="showProduct('SPF 50+ Cream','Daily UV protection.','29.99')">
+    <img src="https://via.placeholder.com/400x400?text=SPF+50">
+    <h3>SPF 50+ Cream</h3>
+    <div class="price">$29.99</div>
+  </div>
+
+  <div class="card" onclick="showProduct('Invisible Sunscreen','No white cast.','34.99')">
+    <img src="https://via.placeholder.com/400x400?text=Invisible">
+    <h3>Invisible Sunscreen</h3>
+    <div class="price">$34.99</div>
+  </div>
+
+  <div class="card" onclick="showProduct('Sport Sunscreen','Water resistant.','27.99')">
+    <img src="https://via.placeholder.com/400x400?text=Sport+SPF">
+    <h3>Sport Sunscreen</h3>
+    <div class="price">$27.99</div>
+  </div>
+</div>
+
+<!-- DETAILS -->
+<div id="details">
+  <div class="details-grid">
+    <img id="dImg" src="">
+    <div>
+      <h2 id="dName"></h2>
+      <p id="dDesc"></p>
+      <h3 id="dPrice"></h3>
+      <button>Order Now</button>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<footer>
+© 2026 BeautySkin. All rights reserved.
+</footer>
+
+<script>
+function showProduct(name,desc,price){
+  document.getElementById('details').style.display='block';
+  document.getElementById('dName').innerText=name;
+  document.getElementById('dDesc').innerText=desc;
+  document.getElementById('dPrice').innerText='$'+price;
+  document.getElementById('dImg').src='https://via.placeholder.com/500x500?text='+name.replace(/ /g,'+');
+  window.scrollTo({top:document.getElementById('details').offsetTop-20,behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
