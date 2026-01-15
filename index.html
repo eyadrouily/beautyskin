@@ -2,156 +2,144 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>BeautySkin – Premium Skincare</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BeautySkin Store</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif;}
-body{background:#fdf6f0;color:#222;line-height:1.6;}
-a{text-decoration:none;color:inherit;}
-header{padding:40px 8%;display:flex;justify-content:space-between;align-items:center;}
-.logo{font-size:28px;font-weight:700;letter-spacing:1px;color:#fb8500;}
-.hero{padding:80px 8%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
-.hero h1{font-size:54px;line-height:1.2;margin-bottom:20px;}
-.hero p{font-size:18px;color:#555;margin-bottom:30px;}
-.btn-main{display:inline-block;padding:14px 36px;background:linear-gradient(135deg,#ffb703,#fb8500);color:#000;border-radius:40px;font-weight:600;transition:0.3s;}
-.btn-main:hover{transform:translateY(-3px);}
-.hero-img{background:#ffd6a5;border-radius:30px;height:380px;display:flex;align-items:center;justify-content:center;font-size:22px;color:#777;}
-section{padding:80px 8%;}
-.section-title{font-size:36px;margin-bottom:40px;color:#fb8500;}
-.category{margin-bottom:60px;}
-.category h3{font-size:26px;margin-bottom:25px;color:#ffb703;}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px;}
-.product{background:#fff5eb;border-radius:22px;padding:25px;text-align:center;transition:0.3s;}
-.product:hover{transform:translateY(-6px);}
-.product-img{height:180px;border-radius:16px;background:#ffd6a5;margin-bottom:20px;display:flex;align-items:center;justify-content:center;color:#555;}
-.product h4{font-size:18px;margin-bottom:8px;}
-.price{color:#fb8500;font-weight:600;margin-bottom:15px;}
-.btn-order{display:inline-block;padding:10px 24px;background:#fb8500;color:#fff;border-radius:30px;font-size:14px;font-weight:600;transition:0.3s;cursor:pointer;}
-.btn-order:hover{transform:translateY(-3px);}
-footer{padding:40px 8%;text-align:center;color:#555;font-size:14px;}
-/* Modal */
-.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);justify-content:center;align-items:center;}
-.modal-content{background:#fff5eb;padding:30px;border-radius:20px;width:90%;max-width:450px;}
-.close{float:right;font-size:24px;cursor:pointer;}
-input, select{width:100%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid #ccc;}
-button{padding:12px 24px;background:#fb8500;color:#fff;border:none;border-radius:30px;cursor:pointer;font-weight:600;}
-@media(max-width:900px){.hero{grid-template-columns:1fr;}.hero h1{font-size:40px;}}
+body{margin:0;font-family:Arial;background:#f9f9f9;color:#333;}
+header{background:#ffccdd;padding:20px;text-align:center;position:sticky;top:0;}
+header img{height:50px;}
+nav a{margin:0 15px;color:#333;text-decoration:none;font-weight:bold;}
+.hero{padding:60px;text-align:center;background:linear-gradient(to right, #ffccdd, #ffe6f0);}
+.hero h1{font-size:2.5rem;}
+.hero p{font-size:1.2rem;margin-top:10px;}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:20px;}
+.card{background:#fff;border-radius:8px;padding:15px;box-shadow:0 2px 6px rgba(0,0,0,0.1);transition:transform 0.3s;}
+.card:hover{transform:translateY(-5px);}
+.card img{width:100%;border-radius:6px;}
+.card h3{margin:10px 0 5px;}
+.price{color:#e91e63;font-weight:bold;margin:5px 0;}
+.btn{display:inline-block;padding:10px 15px;background:#e91e63;color:#fff;border-radius:5px;text-decoration:none;transition:background 0.3s;}
+.btn:hover{background:#d81b60;}
+.consult{padding:40px;text-align:center;background:#fff0f5;margin:20px;}
+footer{padding:20px;text-align:center;background:#f1f1f1;}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">BeautySkin</div>
+<img src="logo.png" alt="BeautySkin Logo">
+<nav>
+  <a href="#home">Home</a>
+  <a href="#shop">Shop</a>
+  <a href="#contact">Contact</a>
+</nav>
 </header>
 
-<section class="hero">
-  <div>
-    <h1>Premium Skincare Designed to Glow</h1>
-    <p>High-performance skincare products crafted for visible results and modern beauty standards.</p>
-    <a href="#shop" class="btn-main">Shop Now</a>
-  </div>
-  <div class="hero-img">Hero Visual</div>
+<section class="hero" id="home">
+<h1>Welcome to BeautySkin</h1>
+<p>Your ultimate skincare destination</p>
+<a class="btn" href="#shop">Shop Now</a>
 </section>
 
-<section id="shop">
-  <h2 class="section-title">Our Collections</h2>
-
-  <!-- Category 1: Sunscreen -->
-  <div class="category">
-    <h3>Sunscreen</h3>
-    <div class="products">
-      <div class="product"><div class="product-img">Product</div><h4>UV Shield SPF 50</h4><div class="price">$24.99</div><div class="btn-order">Order Now</div></div>
-      <div class="product"><div class="product-img">Product</div><h4>Daily Sun Defense</h4><div class="price">$21.99</div><div class="btn-order">Order Now</div></div>
-      <div class="product"><div class="product-img">Product</div><h4>Invisible UV Gel</h4><div class="price">$26.99</div><div class="btn-order">Order Now</div></div>
-    </div>
-  </div>
-
-  <!-- Category 2: Brightening -->
-  <div class="category">
-    <h3>Brightening</h3>
-    <div class="products">
-      <div class="product"><div class="product-img">Product</div><h4>Glow Serum</h4><div class="price">$29.99</div><div class="btn-order">Order Now</div></div>
-      <div class="product"><div class="product-img">Product</div><h4>Vitamin C Cream</h4><div class="price">$27.99</div><div class="btn-order">Order Now</div></div>
-      <div class="product"><div class="product-img">Product</div><h4>Radiance Booster</h4><div class="price">$31.99</div><div class="btn-order">Order Now</div></div>
-    </div>
-  </div>
-
-  <!-- Category 3: Hydration -->
-  <div class="category">
-    <h3>Hydration</h3>
-    <div class="products">
-      <div class="product"><div class="product-img">Product</div><h4>Hydrating Cream</h4><div class="price">$39.99</div><div class="btn-order">Order Now</div></div>
-      <div class="product"><div class="product-img">Product</div><h4>Moisture Lock Serum</h4><div class="price">$41.99</div><div class="btn-order">Order Now</div></div>
-      <div class="product"><div class="product-img">Product</div><h4>Deep Hydration Gel</h4><div class="price">$37.99</div><div class="btn-order">Order Now</div></div>
-    </div>
-  </div>
-
-  <!-- Category 4: Under Eye Care -->
-  <div class="category">
-    <h3>Under Eye Care</h3>
-    <div class="products">
-      <div class="product"><div class="product-img">Product</div><h4>Dark Circle Serum</h4><div class="price">$22.99</div><div class="btn-order">Order Now</div></div>
-      <div class="product"><div class="product-img">Product</div><h4>Eye Bright Gel</h4><div class="price">$24.99</div><div class="btn-order">Order Now</div></div>
-      <div class="product"><div class="product-img">Product</div><h4>Gel Eye Patches (2 pcs)</h4><div class="price">$19.99</div><div class="btn-order">Order Now</div></div>
-    </div>
-  </div>
-
-  <!-- Category 5: Anti-Acne / Blackheads -->
-  <div class="category">
-    <h3>Anti-Acne / Blackheads</h3>
-    <div class="products">
-      <div class="product"><div class="product-img">Product</div><h4>Clear Skin Gel</h4><div class="price">$29.99</div><div class="btn-order">Order Now</div></div>
-      <div class="product"><div class="product-img">Product</div><h4>Blackhead Remover</h4><div class="price">$32.99</div><div class="btn-order">Order Now</div></div>
-      <div class="product"><div class="product-img">Product</div><h4>Acne Treatment Cream</h4><div class="price">$28.99</div><div class="btn-order">Order Now</div></div>
-    </div>
-  </div>
-
-</section>
-
-<!-- Order Modal -->
-<div id="orderModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Order Your Product</h2>
-    <form id="orderForm">
-      <label>Product:</label>
-      <input type="text" id="productName" readonly>
-      <label>Name:</label>
-      <input type="text" required>
-      <label>Shipping Address:</label>
-      <input type="text" required>
-      <label>Quantity:</label>
-      <input type="number" min="1" value="1" required>
-      <label>Payment Method:</label>
-      <select required>
-        <option>Crypto</option>
-        <option>Binance</option>
-        <option>Western Union</option>
-      </select>
-      <button type="submit">Submit Order</button>
-    </form>
-  </div>
+<section class="products" id="shop">
+<!-- Whitening -->
+<div class="card">
+<img src="https://via.placeholder.com/400x400?text=Whitening+1">
+<h3>Brightening Serum</h3>
+<div class="price">$49.99</div>
+<a class="btn" href="https://wa.me/?text=I%20want%20Brightening%20Serum">Order Now</a>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/400x400?text=Whitening+2">
+<h3>Glow Cream</h3>
+<div class="price">$39.99</div>
+<a class="btn" href="https://wa.me/?text=I%20want%20Glow%20Cream">Order Now</a>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/400x400?text=Whitening+3">
+<h3>Spot Corrector</h3>
+<div class="price">$29.99</div>
+<a class="btn" href="https://wa.me/?text=I%20want%20Spot%20Corrector">Order Now</a>
 </div>
 
+<!-- Hydration -->
+<div class="card">
+<img src="https://via.placeholder.com/400x400?text=Hydrating+1">
+<h3>Hydrating Cream</h3>
+<div class="price">$39.99</div>
+<a class="btn" href="https://wa.me/?text=I%20want%20Hydrating%20Cream">Order Now</a>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/400x400?text=Hydrating+2">
+<h3>Moisture Gel</h3>
+<div class="price">$34.99</div>
+<a class="btn" href="https://wa.me/?text=I%20want%20Moisture%20Gel">Order Now</a>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/400x400?text=Hydrating+3">
+<h3>Hydrating Serum</h3>
+<div class="price">$44.99</div>
+<a class="btn" href="https://wa.me/?text=I%20want%20Hydrating%20Serum">Order Now</a>
+</div>
+
+<!-- Sunscreen -->
+<div class="card">
+<img src="https://via.placeholder.com/400x400?text=Sunscreen+1">
+<h3>SPF 50 Lotion</h3>
+<div class="price">$24.99</div>
+<a class="btn" href="https://wa.me/?text=I%20want%20SPF%2050%20Lotion">Order Now</a>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/400x400?text=Sunscreen+2">
+<h3>Daily SPF Gel</h3>
+<div class="price">$19.99</div>
+<a class="btn" href="https://wa.me/?text=I%20want%20Daily%20SPF%20Gel">Order Now</a>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/400x400?text=Sunscreen+3">
+<h3>Face Sunblock</h3>
+<div class="price">$29.99</div>
+<a class="btn" href="https://wa.me/?text=I%20want%20Face%20Sunblock">Order Now</a>
+</div>
+
+<!-- Eye Care -->
+<div class="card">
+<img src="https://via.placeholder.com/400x400?text=Eye+Gel+Patch">
+<h3>Gel Patch (2 pcs)</h3>
+<div class="price">$14.99</div>
+<a class="btn" href="https://wa.me/?text=I%20want%20Gel%20Patch">Order Now</a>
+</div>
+
+<!-- Acne & Dark Spots -->
+<div class="card">
+<img src="https://via.placeholder.com/400x400?text=Acne+Treatment+1">
+<h3>Acne Spot Treatment</h3>
+<div class="price">$22.99</div>
+<a class="btn" href="https://wa.me/?text=I%20want%20Acne%20Spot%20Treatment">Order Now</a>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/400x400?text=Acne+Treatment+2">
+<h3>Anti-Blemish Cream</h3>
+<div class="price">$26.99</div>
+<a class="btn" href="https://wa.me/?text=I%20want%20Anti-Blemish%20Cream">Order Now</a>
+</div>
+<div class="card">
+<img src="https://via.placeholder.com/400x400?text=Acne+Treatment+3">
+<h3>Spot Serum</h3>
+<div class="price">$29.99</div>
+<a class="btn" href="https://wa.me/?text=I%20want%20Spot%20Serum">Order Now</a>
+</div>
+</section>
+
+<section class="consult">
+<h2>Pharmacist Consultation</h2>
+<p>Get expert advice for only $9.99. First consultation is free!</p>
+<a class="btn" href="mailto:consult@beautyskin.com">Request Now</a>
+</section>
+
 <footer>
-  © 2026 BeautySkin. All rights reserved.
+&copy; 2026 BeautySkin
 </footer>
 
-<script>
-const modal=document.getElementById('orderModal');
-const span=modal.querySelector('.close');
-const productNameInput=document.getElementById('productName');
-document.querySelectorAll('.btn-order').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    productNameInput.value=btn.parentElement.querySelector('h4').innerText;
-    modal.style.display='flex';
-  });
-});
-span.onclick=()=>modal.style.display='none';
-window.onclick=e=>{if(e.target==modal) modal.style.display='none';};
-</script>
-
 </body>
-  </html>
+</html>
