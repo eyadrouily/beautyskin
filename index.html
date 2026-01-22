@@ -8,14 +8,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif}:root{--main:#ff9900;}
 body{background:#fff7d6;color:#222}
 header{padding:30px 8%;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:28px;font-weight:700;color:#ff9900}
+..logo{font-size:28px;font-weight:700;color:var(--main)}
 .hero{padding:90px 8%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .hero h1{font-size:52px;margin-bottom:20px}
 .hero p{font-size:18px;color:#555;margin-bottom:30px}
-.btn-main{padding:14px 36px;background:linear-gradient(135deg,#ffcc00,#ff9900);border-radius:40px;font-weight:600;display:inline-block}
+..btn-main{background:linear-gradient(135deg,#ffcc00,var(--main));}
 .hero-img{background:#ffe08a;border-radius:24px;height:100px;widht:100;object-fit:coverdisplay:flex;align-items:center;justify-content:center;font-size:22px}
 section{padding:80px 8%}
 .section-title{font-size:36px;margin-bottom:50px;color:#ff9900}
@@ -26,9 +26,8 @@ section{padding:80px 8%}
 .product:hover{transform:translateY(-6px)}
 .product-img{height:180px;background:#ffe08a;border-radius:16px;margin-bottom:20px;display:flex;align-items:center;justify-content:center}
 .price{color:#ff9900;font-weight:600;margin-bottom:15px}
-.btn-order{padding:10px 26px;background:#ff9900;color:#fff;border-radius:30px;cursor:pointer}
-footer{padding:40px;text-align:center;color:#555}
-
+  .product{transition:.3s}
+.btn-order{background:var(--main);}.btn-order:hover{opacity:.9}
 .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);justify-content:center;align-items:center}
 .modal-content{background:#fff7d6;padding:30px;border-radius:20px;width:90%;max-width:420px}
 .close{float:right;font-size:24px;cursor:pointer}
@@ -55,7 +54,7 @@ button{padding:12px 24px;background:#ff9900;color:#fff;border:none;border-radius
     <p>Modern skincare products crafted for visible results.</p>
     <a href="#shop" class="btn-main">Shop Now</a>
   </div>
-  <div class="hero-image">
+  <div class="hero-img">
   <img src="https://via.placeholder.com/400x400?text=Skincare+Product" alt="Hero Product">
 </div>
 </section>
